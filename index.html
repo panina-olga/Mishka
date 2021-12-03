@@ -14,31 +14,165 @@
 </head>
 
 <body>
-    <div class="content">
-        <div class="header-conteiner">
-            <header class="header">
 
-
-                <ul class="header-left">
-                    <li class="header-left__item"><a class="header-left__link" href=""> Каталог товаров</a></li>
-                    <li class="header-left__item"><a class="header-left__link" href="">Вязание на заказ</a></li>
+    <div class="header-conteiner">
+        <header class="header">
+            <nav class="header-nav">
+                <ul class="header-nav__list">
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href=""> Каталог товаров</a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="">Вязание на заказ</a>
+                    </li>
                 </ul>
 
-                <div class="header__logo">
-                    <img class="header__img" src="img/mishka-logo-desktop.svg.png" alt="">
-                </div>
+            </nav>
+            <div class="header-logo">
+                <img class="header-logo__img" srcset="
+                    img/mishka-logo-mobile.png 86w,
+                    img/mishka-logo-tablet.png 113w, 
+                    img/mishka-logo-desktop.png 149w
+                    " sizes="
+                    (max-width: 320px) 86px,
+                    (max-width: 768px) 113px,
+                    (min-width: 769px) 149px
+                    " src="mishka-logo-desktop.png" alt="Logo">
 
-                <ul class="header-right">
-                    <li class="header-right__item"><img class="header-right__cart" src="img/cart.svg.png" alt="">
-                        Корзина: пока пуста</li>
-                    <li class="header-right__item"><img src="img/search.svg.png" alt=""></li>
+            </div>
 
-                </ul>
+            <ul class="header-right">
+                <li class="header-right__item"><img class="header-right__cart" src="img/cart.png" alt="">
+                    Корзина: пока пуста</li>
+                <li class="header-right__item"><img src="img/search.svg.png" alt=""></li>
 
+            </ul>
 
-            </header>
-        </div>
+            <div class="header__burger">
+                <span></span>
+            </div>
+
+        </header>
+
     </div>
+
+    <main class="main">
+        <section class="about content">
+            <div class="about-header">
+                <div class="about-header__left">
+                    <ul class="about-header__left-list">
+                        <li class="about-header__left-item"><a class="about-header__left-link" href="">Новые
+                                поступления</a></li>
+                        <li class="about-header__left-item">
+                            <a class="about-header__left-link" href="">Распродажа</a>
+                        </li>
+                    </ul>
+
+                    <ul class="about-header__left-change">
+                        <li class="about-header__left-item">
+                            <a class="about-header__left-link" href=""> Каталог товаров</a>
+                        </li>
+                        <li class="about-header__left-item">
+                            <a class="about-header__left-link" href="">Вязание на заказ</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="about-header__right">
+                    <ul class="about-header__right-list">
+                        <li class="about-header__right-item"><a class="about-header__right-link" href="">Бесплатная
+                                доставка по России</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h1 class="about__titel">
+                Милые штуки ручной работы для дома
+            </h1>
+            <div class="about__product product">
+                <a href="" class="product__left-link">
+                    <span class="product__name">
+                        Предметы интерьера</span>
+                    <img src="img/interior.png" alt="">
+                </a>
+                <a href="" class="product__right-link">
+                    <span class="product__name">
+                        Детские игрушки</span>
+                    <img src="img/toy.png" alt="">
+                </a>
+            </div>
+
+        </section>
+
+        <div class="border-wave">
+        </div>
+
+        <section class="product-week content">
+            <div class="main-content">
+                <div class="product-week__header">
+                    <div class="product-week__name-block">
+                        ТОВАР НЕДЕЛИ
+                    </div>
+                    <div class="product-week__name-product content_titel">
+                        Вязаные корзинки
+                    </div>
+                </div>
+                <div class="product-week__text-block">
+                    <div class="product-week__description">
+                        Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+                    </div>
+                    <table class="product-week__specifications">
+                        <tr>
+                            <td>
+                                Цвет:
+                            </td>
+                            <td>
+                                "Тиффани"/Серый
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Диаметр:
+                            </td>
+                            <td>
+                                25 см
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Высота:
+                            </td>
+                            <td>
+                                15 см
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="product-week__photo">
+                    <img srcset="
+                    img/triple-set-mobile.png 260w,
+                    img/triple-set-tablet.png 333w, 
+                    img/triple-set-desktop.png 525w
+                    " sizes="
+                    (max-width: 320px) 260px,
+                    (max-width: 768px) 333px,
+                    (min-width: 769px) 525px
+                    " src="mishka-logo-desktop.png" alt="product-week">
+                </div>
+                <div class="product-week__order-block">
+                    <div class="product-week__price">
+                        Цена: 990 руб.
+                    </div>
+                    <div class="product-week__order-btn">
+                        <button class="content_main-button">
+                            ЗАКАЗАТЬ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
 </body>
 
 </html>
