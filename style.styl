@@ -31,7 +31,6 @@ body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     font-family: "Open Sans"; 
-    margin-bottom: 100px;
 }
 
 ul[class],
@@ -183,7 +182,6 @@ select {
     }
 }
 
-
 .about__titel{
     font-size: 51.725px;
     color: rgb(0, 0, 0);
@@ -244,7 +242,7 @@ select {
     margin-left: 175px;
     display: flex;
     flex-direction: column;
-    height: 636px;
+    position: relative;
 }
 
 .product-week{
@@ -253,6 +251,10 @@ select {
     display: flex; 
     flex-direction: column;
     margin-bottom: 73px;
+
+    .main-content{
+        height: 636px;
+    }
 }
 
 .product-week__header{
@@ -283,7 +285,7 @@ select {
     position: absolute;
     z-index: -1;
     top: 0;
-    right: 100px;
+    right: 0;
     bottom: 0;
 }
 
@@ -304,12 +306,14 @@ select {
     line-height: 1.333;
     width: 100%;
     border-collapse: collapse;
+    
+    tr {
+        border-bottom: 2px solid #ececec;
+        height:40px;
+    }
 }
 
-tr {
-    border-bottom: 2px solid #ececec;
-    height:40px;
-}
+
 
 .product-week__order-block{
     max-width: 292px;
@@ -346,6 +350,7 @@ tr {
 }
 
 .product-week__order-btn{
+
     .content_main-button{
         width: 100%;
         height: 52px;
@@ -356,6 +361,7 @@ tr {
 .advantages{
     margin-top: 68px;
     margin-bottom: 90px;
+
     .main-content{
         max-width: 700px;
     }
@@ -387,6 +393,151 @@ tr {
         line-height: 1.1;
     }
 }
+
+.reviews{
+    padding-top: 71px;
+    background-image: url(img/review.png);
+    background-position-x: 100px; 
+    background-repeat: no-repeat;
+    min-height: 457px;
+    position: relative;
+
+    .reviews__titel{
+        margin-bottom: 53px;
+    }
+
+    .reviews__text{
+        font-size: 17px;
+        color: rgb(68, 68, 68);
+        line-height: 1.765;
+        max-width: 772px;
+        margin-bottom: 45px;
+    }
+
+    .reviews__author-name{
+        font-size: 17px;  color: rgb(0, 0, 0);
+        font-weight: bold;
+        line-height: 1.412;
+    }
+
+    .reviews__author-email{
+        margin-top: 12px;
+        font-size: 17px;
+        color: #444444;
+    }
+
+    .reviews__write-btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .content_main-button{
+        padding: 20px 42px;
+    }
+
+    .reviews__swipe-btn{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 175px;
+        display: flex;
+        justify-content: space-around
+        button{
+            background-color: inherit;
+            border: none;
+            padding: 0;
+            margin:0;
+            font-size: 50px;
+        }
+    }
+}
+
+.contacts{
+    margin-top: 71px;
+    margin-bottom: 105px;
+
+    .main-content{
+        min-height: 457px;
+        padding-top: 79px;
+    }
+
+    .contacts__header{
+        display: flex;
+        margin-left: -175px;
+        margin-bottom: 41px;
+        align-items: center;
+    }
+
+    .contacts__icon{
+        min-width: 175px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contacts__text{
+        max-width: 277px;
+        font-size: 17px;
+        color: rgb(68, 68, 68);
+        line-height: 1.765;
+
+        td{
+            min-width: 78px;
+            vertical-align: top;
+        }
+    }
+
+    .contacts__map{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .contacts__btn{
+        margin-top: auto;
+    }
+
+    .content_main-button{
+        padding: 20px 42px;
+    }
+}
+
+.footer{
+    background-color: #f1f1f1;
+    
+
+    .footer__wrapper{
+        min-height: 143px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .social-network__list{
+        display: flex;
+        align-items: center;
+    }
+
+    .social-network__item + .social-network__item{
+        margin-left: 40px;
+    }
+
+    .footer__copyright{
+        display: flex;
+        min-width: 184px;
+        justify-content: space-between;
+        align-items: center;
+
+        span{
+            font-size: 19px;
+            font-weight: bold;
+            line-height: 0.947;
+        }
+    }
+}
+
+
+
 
 
 @media  (max-width: 1249px){
@@ -427,11 +578,12 @@ tr {
      .border-wave{
         height: 24px;
     }
-
-    .main-content{
-        margin-left: 0;
-        height: 507px;
+    .product-week{
+        .main-content{
+            margin-left: 0;
+            height: 507px;
         }
+    }
 
     .product-week{
         margin-top: 41px;
@@ -449,26 +601,29 @@ tr {
 
     .content_titel{
         font-size: 43px;
+        line-height: 1.163;
     }
 
     .product-week__photo{
-        right: 50px;
+        right: 0px;
         bottom: 0;
         top: auto;
     }
 
     .product-week__specifications{
-        margin-top: 45px;
+        margin-top: 45px;  
+        
+        tr {
+            border-bottom: 1px solid #ececec;
+        }
     }
 
-    tr {
-        border-bottom: 1px solid #ececec;
-    }
     .advantages{
         margin-bottom: 80px;  
           
         .main-content{
-        max-width: 668px;
+            margin-left: 0;
+            max-width: 668px;
         }
     }
     .advantages__titel{
@@ -478,7 +633,76 @@ tr {
         flex: 1 1 334px;
     }
 
+    .reviews{
+        padding-top: 85px;
+        background-position-x: 0px; 
+        position: relative;
+
+        .reviews__titel{
+            margin-bottom: 53px;
+        }
+
+        .content_main-button{
+            padding: 20px 40px;
+        }
+
+        .main-content{
+            margin-left: 0;
+        }
+    }
+
+    
+    .contacts{
+        margin-top: 69px;
+        margin-bottom: 57px;
+
+        .main-content{
+            min-height: auto;
+            padding-top: 0px;
+            margin-left: 0px;
+        }
+
+        .contacts__header{
+            display: flex;
+            flex-direction: row-reverse
+            justify-content: space-between;
+            margin-left: 0px;
+            margin-bottom: 35px;
+        }
+
+        .contacts__icon{
+            min-width: auto;
+        }
+
+        .contacts__text{
+            max-width: 100%;
+            margin-bottom: 60px;
+
+            tr {
+                display: inline-block;
+                width: 50%;
+                vertical-align: top;
+            }
+        }
+
+        .contacts__map{
+            position: static;
+            margin-bottom: 55px;
+            margin-left: -50px;
+            margin-right: -50px;
+        }
+
+        .contacts__btn{
+            margin: 0 auto;
+        }
+
+        .content_main-button{
+            padding: 20px 40px;
+        }
+    }
+
 }
+
 
 
 
@@ -576,11 +800,17 @@ tr {
     .border-wave{
         display: none;
     }
-
-    .main-content{
-        height: auto;
-        margin: 0px 30px;
+    .product-week{
+        .main-content{
+         height: auto;
+          margin: 0px 30px;
         }
+    }
+
+    .content_titel{
+        font-size: 25px;
+        line-height: 1.2;
+    }
 
     .product-week{
         margin-top: 33px;
@@ -618,6 +848,7 @@ tr {
         margin-bottom: 60px;
         .main-content{
             max-width: 260px;
+            margin: 0 auto;
         }
     }
 
@@ -635,6 +866,141 @@ tr {
             line-height: 1.176;
         }
     }
+
+    .reviews{
+    padding-top: 0px;
+    background: none;
+
+        .main-content{
+            max-width: 260px;
+            margin: 0 auto;
+        }
+
+        .reviews__titel{
+            margin-bottom: 35px;
+        }
+
+        .reviews__text{
+            font-size: 15px;
+            color: rgb(68, 68, 68);
+            line-height: 2;
+            margin-bottom: 40px;
+        }
+
+        .reviews__author-name{
+            font-size: 17px;  
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            line-height: 1.412;
+        }
+
+        .reviews__author-email{
+            margin-top: 12px;
+            font-size: 17px;
+            color: #444444;
+            margin-bottom: 35px;
+        }
+
+        .reviews__write-btn{
+            position: static;
+            width: 100%;
+
+            .content_main-button{
+                width: 100%;
+            }
+        }
+
+        .reviews__swipe-btn{
+            position: static;
+            width: 100%;
+            margin-bottom: 38px;
+
+            button{
+                border: 1px solid #ececec;
+                width: 50%;
+            }
+            button + button{
+                border-left: none;
+            }
+        }
+    }
+
+
+
+    .contacts{
+        margin-top: 43px;
+        margin-bottom: 39px;
+
+        .main-content{
+            max-width: 260px;
+            margin: 0 auto;    
+        }
+
+        .contacts__header{
+            display: block;
+            margin-left: 0px;
+            margin-bottom: 19px;
+        }
+
+        .contacts__icon{
+            display: none;
+        }
+
+        .contacts__text{
+            max-width: 260px;
+            margin-bottom: 42px;
+            font-size: 15px;
+            line-height: 2;
+
+            tr{
+                display: table-row;
+            }
+
+            td{
+                min-width: 78px;
+                vertical-align: top;
+            }
+        }
+
+        .contacts__map{
+            position: static;
+            margin: 0 -30px 39px -30px;
+        }
+
+        .content_main-button{
+            padding: 20px 40px;
+            width: 100%;
+        }
+
+        .contacts__btn{
+            width: 100%;
+        }
+    }
+
+    .footer{
+        
+        .footer__wrapper{
+            min-width: 260px;
+            min-height: 160px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer__logo{
+            display: none;
+        }
+
+         .footer__social-network{
+            border-bottom: 1px solid #e5e5e5;
+            min-width: 260px;
+            justify-content: center;
+        }
+
+        .footer__social-network, .footer__copyright{
+            flex: 1 1 50%;
+            display: flex;
+            align-items: center;
+        }
+    }
 }
-
-

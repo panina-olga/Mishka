@@ -28,7 +28,6 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: "Open Sans";
-  margin-bottom: 100px;
 }
 ul[class],
 ol[class] {
@@ -214,7 +213,7 @@ select {
   margin-left: 175px;
   display: flex;
   flex-direction: column;
-  height: 636px;
+  position: relative;
 }
 .product-week {
   position: relative;
@@ -222,6 +221,9 @@ select {
   display: flex;
   flex-direction: column;
   margin-bottom: 73px;
+}
+.product-week .main-content {
+  height: 636px;
 }
 .product-week__header {
   margin-top: 61px;
@@ -248,7 +250,7 @@ select {
   position: absolute;
   z-index: -1;
   top: 0;
-  right: 100px;
+  right: 0;
   bottom: 0;
 }
 .product-week__text-block {
@@ -267,7 +269,7 @@ select {
   width: 100%;
   border-collapse: collapse;
 }
-tr {
+.product-week__specifications tr {
   border-bottom: 2px solid #ececec;
   height: 40px;
 }
@@ -332,6 +334,125 @@ tr {
   font-weight: bold;
   line-height: 1.1;
 }
+.reviews {
+  padding-top: 71px;
+  background-image: url("img/review.png");
+  background-position-x: 100px;
+  background-repeat: no-repeat;
+  min-height: 457px;
+  position: relative;
+}
+.reviews .reviews__titel {
+  margin-bottom: 53px;
+}
+.reviews .reviews__text {
+  font-size: 17px;
+  color: #444;
+  line-height: 1.765;
+  max-width: 772px;
+  margin-bottom: 45px;
+}
+.reviews .reviews__author-name {
+  font-size: 17px;
+  color: #000;
+  font-weight: bold;
+  line-height: 1.412;
+}
+.reviews .reviews__author-email {
+  margin-top: 12px;
+  font-size: 17px;
+  color: #444;
+}
+.reviews .reviews__write-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.reviews .content_main-button {
+  padding: 20px 42px;
+}
+.reviews .reviews__swipe-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 175px;
+  display: flex;
+  justify-content: space-around;
+}
+.reviews .reviews__swipe-btn button {
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 50px;
+}
+.contacts {
+  margin-top: 71px;
+  margin-bottom: 105px;
+}
+.contacts .main-content {
+  min-height: 457px;
+  padding-top: 79px;
+}
+.contacts .contacts__header {
+  display: flex;
+  margin-left: -175px;
+  margin-bottom: 41px;
+  align-items: center;
+}
+.contacts .contacts__icon {
+  min-width: 175px;
+  display: flex;
+  justify-content: center;
+}
+.contacts .contacts__text {
+  max-width: 277px;
+  font-size: 17px;
+  color: #444;
+  line-height: 1.765;
+}
+.contacts .contacts__text td {
+  min-width: 78px;
+  vertical-align: top;
+}
+.contacts .contacts__map {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.contacts .contacts__btn {
+  margin-top: auto;
+}
+.contacts .content_main-button {
+  padding: 20px 42px;
+}
+.footer {
+  background-color: #f1f1f1;
+}
+.footer .footer__wrapper {
+  min-height: 143px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .social-network__list {
+  display: flex;
+  align-items: center;
+}
+.footer .social-network__item + .social-network__item {
+  margin-left: 40px;
+}
+.footer .footer__copyright {
+  display: flex;
+  min-width: 184px;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footer__copyright span {
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 0.947;
+}
 @media (max-width: 1249px) {
   .header-conteiner {
     margin: 0 0;
@@ -364,7 +485,7 @@ tr {
   .border-wave {
     height: 24px;
   }
-  .main-content {
+  .product-week .main-content {
     margin-left: 0;
     height: 507px;
   }
@@ -381,22 +502,24 @@ tr {
   }
   .content_titel {
     font-size: 43px;
+    line-height: 1.163;
   }
   .product-week__photo {
-    right: 50px;
+    right: 0px;
     bottom: 0;
     top: auto;
   }
   .product-week__specifications {
     margin-top: 45px;
   }
-  tr {
+  .product-week__specifications tr {
     border-bottom: 1px solid #ececec;
   }
   .advantages {
     margin-bottom: 80px;
   }
   .advantages .main-content {
+    margin-left: 0;
     max-width: 668px;
   }
   .advantages__titel {
@@ -404,6 +527,60 @@ tr {
   }
   .advantages-item {
     flex: 1 1 334px;
+  }
+  .reviews {
+    padding-top: 85px;
+    background-position-x: 0px;
+    position: relative;
+  }
+  .reviews .reviews__titel {
+    margin-bottom: 53px;
+  }
+  .reviews .content_main-button {
+    padding: 20px 40px;
+  }
+  .reviews .main-content {
+    margin-left: 0;
+  }
+  .contacts {
+    margin-top: 69px;
+    margin-bottom: 57px;
+  }
+  .contacts .main-content {
+    min-height: auto;
+    padding-top: 0px;
+    margin-left: 0px;
+  }
+  .contacts .contacts__header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-bottom: 35px;
+  }
+  .contacts .contacts__icon {
+    min-width: auto;
+  }
+  .contacts .contacts__text {
+    max-width: 100%;
+    margin-bottom: 60px;
+  }
+  .contacts .contacts__text tr {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+  .contacts .contacts__map {
+    position: static;
+    margin-bottom: 55px;
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+  .contacts .contacts__btn {
+    margin: 0 auto;
+  }
+  .contacts .content_main-button {
+    padding: 20px 40px;
   }
 }
 @media (max-width: 767px) {
@@ -489,9 +666,13 @@ tr {
   .border-wave {
     display: none;
   }
-  .main-content {
+  .product-week .main-content {
     height: auto;
     margin: 0px 30px;
+  }
+  .content_titel {
+    font-size: 25px;
+    line-height: 1.2;
   }
   .product-week {
     margin-top: 33px;
@@ -523,6 +704,7 @@ tr {
   }
   .advantages .main-content {
     max-width: 260px;
+    margin: 0 auto;
   }
   .advantages__titel {
     margin-bottom: 10px;
@@ -535,5 +717,114 @@ tr {
     font-size: 17px;
     font-weight: bold;
     line-height: 1.176;
+  }
+  .reviews {
+    padding-top: 0px;
+    background: none;
+  }
+  .reviews .main-content {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+  .reviews .reviews__titel {
+    margin-bottom: 35px;
+  }
+  .reviews .reviews__text {
+    font-size: 15px;
+    color: #444;
+    line-height: 2;
+    margin-bottom: 40px;
+  }
+  .reviews .reviews__author-name {
+    font-size: 17px;
+    color: #000;
+    font-weight: bold;
+    line-height: 1.412;
+  }
+  .reviews .reviews__author-email {
+    margin-top: 12px;
+    font-size: 17px;
+    color: #444;
+    margin-bottom: 35px;
+  }
+  .reviews .reviews__write-btn {
+    position: static;
+    width: 100%;
+  }
+  .reviews .reviews__write-btn .content_main-button {
+    width: 100%;
+  }
+  .reviews .reviews__swipe-btn {
+    position: static;
+    width: 100%;
+    margin-bottom: 38px;
+  }
+  .reviews .reviews__swipe-btn button {
+    border: 1px solid #ececec;
+    width: 50%;
+  }
+  .reviews .reviews__swipe-btn button + button {
+    border-left: none;
+  }
+  .contacts {
+    margin-top: 43px;
+    margin-bottom: 39px;
+  }
+  .contacts .main-content {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+  .contacts .contacts__header {
+    display: block;
+    margin-left: 0px;
+    margin-bottom: 19px;
+  }
+  .contacts .contacts__icon {
+    display: none;
+  }
+  .contacts .contacts__text {
+    max-width: 260px;
+    margin-bottom: 42px;
+    font-size: 15px;
+    line-height: 2;
+  }
+  .contacts .contacts__text tr {
+    display: table-row;
+  }
+  .contacts .contacts__text td {
+    min-width: 78px;
+    vertical-align: top;
+  }
+  .contacts .contacts__map {
+    position: static;
+    margin: 0 -30px 39px -30px;
+  }
+  .contacts .content_main-button {
+    padding: 20px 40px;
+    width: 100%;
+  }
+  .contacts .contacts__btn {
+    width: 100%;
+  }
+  .footer .footer__wrapper {
+    min-width: 260px;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .footer__logo {
+    display: none;
+  }
+  .footer .footer__social-network {
+    border-bottom: 1px solid #e5e5e5;
+    min-width: 260px;
+    justify-content: center;
+  }
+  .footer .footer__social-network,
+  .footer .footer__copyright {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
   }
 }

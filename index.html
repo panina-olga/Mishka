@@ -34,9 +34,9 @@
                     img/mishka-logo-tablet.png 113w, 
                     img/mishka-logo-desktop.png 149w
                     " sizes="
-                    (max-width: 320px) 86px,
-                    (max-width: 768px) 113px,
-                    (min-width: 769px) 149px
+                    (max-width: 767px) 86px,
+                    (max-width: 1249px) 113px,
+                    (min-width: 1250px) 149px
                     " src="mishka-logo-desktop.png" alt="Logo">
 
             </div>
@@ -112,9 +112,9 @@
                     <div class="product-week__name-block">
                         ТОВАР НЕДЕЛИ
                     </div>
-                    <div class="product-week__name-product content_titel">
+                    <h2 class="product-week__name-product content_titel">
                         Вязаные корзинки
-                    </div>
+                    </h2>
                 </div>
                 <div class="product-week__text-block">
                     <div class="product-week__description">
@@ -153,9 +153,9 @@
                     img/triple-set-tablet.png 333w, 
                     img/triple-set-desktop.png 525w
                     " sizes="
-                    (max-width: 320px) 260px,
-                    (max-width: 768px) 333px,
-                    (min-width: 769px) 525px
+                    (max-width: 767px) 260px,
+                    (max-width: 1249px) 333px,
+                    (min-width: 1250px) 525px
                     " src="mishka-logo-desktop.png" alt="product-week">
                 </div>
                 <div class="product-week__order-block">
@@ -171,11 +171,11 @@
             </div>
         </section>
 
-        <Section class="advantages content">
+        <section class="advantages content">
             <div class="main-content">
-                <h1 class="advantages__titel content_titel">
+                <h2 class="advantages__titel content_titel">
                     Коротко о нас:
-                </h1>
+                </h2>
                 <ul class="advantages__list">
                     <li class="advantages__item advantages-item">
                         <img class="advantages-item__img" src="img/icon-1.svg.png" alt="">
@@ -208,10 +208,121 @@
                     </li>
                 </ul>
             </div>
-        </Section>
+        </section>
+
+        <section class="reviews content">
+            <div class="main-content">
+                <h2 class="reviews__titel content_titel">
+                    Отзывы
+                </h2>
+                <div class="reviews__text">
+                    Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у
+                    популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии
+                    сразу стали более стильными, а также набирают больше лайков!
+                </div>
+                <div class="reviews__author">
+                    <div class="reviews__author-name">
+                        Анастасия Красильникова
+                    </div>
+                    <div class="reviews__author-email">
+                        @misssssiskras
+                    </div>
+                </div>
+                <div class="reviews__swipe-btn">
+                    <button>
+                        &#8592
+                    </button>
+                    <button>
+                        &#8594
+                    </button>
+                </div>
+                <div class="reviews__write-btn">
+                    <button class="content_main-button">
+                        НАПИСАТЬ
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacts content">
+            <div class="main-content">
+                <div class="contacts__header">
+                    <div class="contacts__icon">
+                        <img src="img/flag.svg.png" alt="contacts-icon">
+                    </div>
+                    <h2 class="contacts__titel content_titel">
+                        Контакты
+                    </h2>
+                </div>
+                <table class="contacts__text">
+                    <tr>
+                        <td>
+                            e-mail:
+                        </td>
+                        <td>
+                            info@mimimishkashop.ru
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            адрес:
+                        </td>
+                        <td>
+                            г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="contacts__map map">
+                    <img class="map__img" srcset="
+                    img/map-mobile@1x.png 322w,
+                    img/map-tablet@1x.png 768w, 
+                    img/map-desktop@1x.png 525w
+                    " sizes="
+                    (max-width: 767px) 322px,
+                    (max-width: 1249px) 768px,
+                    (min-width: 1250px) 525px
+                    " src="img/map-desktop@1x.png" alt="Map">
+                </div>
+                <div class="contacts__btn">
+                    <button class="content_main-button">
+                        НАПИШИТЕ НАМ
+                    </button>
+                </div>
+            </div>
+        </section>
 
     </main>
 
+    <footer class="footer content">
+        <div class="footer__wrapper">
+            <div class="footer__logo">
+                <img src="img/logo-footer.svg.png" alt="Logo">
+            </div>
+            <div class="footer__social-network social-network">
+                <ul class="social-network__list">
+                    <li class="social-network__item">
+                        <a class="social-network__link" href=""><img class="social-network__img" src="img/insta.svg.png"
+                                alt=""></a>
+                    </li>
+                    <li class="social-network__item">
+                        <a class="social-network__link" href=""><img class="social-network__img" src="img/fb.svg.png"
+                                alt=""></a>
+                    </li>
+                    <li class="social-network__item">
+                        <a class="social-network__link" href=""><img class="social-network__img"
+                                src="img/twitter.svg.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__copyright">
+                <span>
+                    Разработано
+                </span>
+                <img src="img/htmlacademy.svg.png" alt="Logo HTMLacademy">
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
