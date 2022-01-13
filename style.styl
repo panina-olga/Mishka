@@ -1,3 +1,5 @@
+@import "color.styl";
+
 *,
 *::before,
 *::after {
@@ -64,14 +66,14 @@ select {
     margin: 0 auto;
 }
 
-.header-conteiner{
+.header{
     margin: 0 auto;
     padding: 0 50px;
     border-bottom: 1px solid #e7e7e7;
     max-width: 1150px;
 }
 
-.header{
+.header-container{
     height: 86px;
     display: flex;
     justify-content: space-between;
@@ -81,8 +83,7 @@ select {
 
 .header-nav, .header-right{
     flex: 1 1 0;
-    display: flex;
-    align-items: center;    
+    display: flex; 
 }
 
 .header-nav__list{
@@ -95,13 +96,20 @@ select {
     font-weight: bold;
     line-height: 1.412;
     text-decoration: none;
+    fill: #d3d2d2;
 
     &:hover{
         color: rgba(0, 0, 0, 0.6);
+        fill:$aHover;
     }
 
     &:active{
         color: rgba(0, 0, 0, 0.302);
+        fill:$aActive;
+    }
+
+    .header-right__svg{
+        margin-right: 31px;     
     }
 }
 
@@ -112,16 +120,15 @@ select {
 .header-nav__item+.header-nav__item, {
     border-left: 1px solid  #ececec;
     padding-left: 35px;
+    margin-left: 35px;
 }
 
 .header-right__item:nth-child(even){
     border-right: 1px solid  #ececec;
     border-left: 1px solid  #ececec;
-    padding-right: 35px;
 }
 
 .header-nav__item{
-    padding-right: 35px;
     display: flex;
     height: 86px;
     align-items: center;
@@ -133,6 +140,7 @@ select {
     height: 86px;
     align-items: center;
 }
+
 
 .header-right__cart{
     margin-right: 32px;
@@ -152,7 +160,9 @@ select {
     padding-top: 27px;
     background-image: url(img/hero-desktop.png);
     background-position-x: center;
-    height: 746px;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    height: 760px;
     display: flex;
     flex-direction: column;
 }
@@ -160,7 +170,7 @@ select {
 .about-header{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 123px;
+    margin-bottom: 120px;
 }
 
 .about-header__left-item{
@@ -182,7 +192,7 @@ select {
     }
 }
 
-.about__titel{
+.about__title{
     font-size: 51.725px;
     color: rgb(0, 0, 0);
     font-weight: bold;
@@ -199,6 +209,14 @@ select {
 .about__product{
     display: flex;
     margin-top: auto; 
+    margin-bottom: -15px;
+}
+
+.about::after{
+    content: "";
+    height: 34px;
+    background-image: url(img/wave.png);
+    margin: 0 -100px;
 }
 
 .product__left-link, .product__right-link{
@@ -216,6 +234,19 @@ select {
     background-color: #56c3b2;
 }
 
+.product__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .product__img{
+        flex: 0 0 60px;
+        display: flex;
+        justify-content: center;
+        }
+  
+}
+
 .product__name{
     font-size: 20px;
     color: rgb(255, 255, 255);
@@ -230,14 +261,6 @@ select {
     line-height: 1.075;
 }
 
-.border-wave{
-    position: relative;
-    height: 20px;
-    background-image: url(img/wave.png);
-    top: -17px;
-    height: 34px;
-}
-
 .main-content{
     margin-left: 175px;
     display: flex;
@@ -248,8 +271,6 @@ select {
 .product-week{
     position: relative;
     margin-top: 54px;
-    display: flex; 
-    flex-direction: column;
     margin-bottom: 73px;
 
     .main-content{
@@ -275,7 +296,7 @@ select {
     padding: 0 30px;
 }
 
-.content_titel{
+.content_title{
     font-size: 53px;
     font-weight: bold;
     line-height: 1.075;
@@ -313,8 +334,6 @@ select {
     }
 }
 
-
-
 .product-week__order-block{
     max-width: 292px;
     margin-top: auto;
@@ -341,7 +360,7 @@ select {
     &:hover{
         color: rgb(255, 255, 255);
         border: none;
-        background-color: #444444;
+        background-color: $aLink;
     }
 
     &:active{
@@ -350,7 +369,6 @@ select {
 }
 
 .product-week__order-btn{
-
     .content_main-button{
         width: 100%;
         height: 52px;
@@ -367,7 +385,7 @@ select {
     }
 }
 
-.advantages__titel{
+.advantages__title{
     margin-bottom: 22px;
 }
 
@@ -375,17 +393,21 @@ select {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
 
+.advantages-item__img-container{
+    width: 55px;
+    display: flex;
+    justify-content: center;
 }
 
 .advantages-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex: 1 1 350px;
     min-height: 100px;
     margin-bottom: 50px;
-
-    .advantages-item__img{
-        margin-bottom: 20px;
-    }
  
     .advantages-item__text{
         font-size: 20px;
@@ -402,7 +424,7 @@ select {
     min-height: 457px;
     position: relative;
 
-    .reviews__titel{
+    .reviews__title{
         margin-bottom: 53px;
     }
 
@@ -443,8 +465,9 @@ select {
         width: 175px;
         display: flex;
         justify-content: space-around
+
         button{
-            background-color: inherit;
+            background-color: #ffffff;
             border: none;
             padding: 0;
             margin:0;
@@ -484,6 +507,20 @@ select {
         td{
             min-width: 78px;
             vertical-align: top;
+
+            a:link{
+                color: black;
+                text-decoration: underline $aHover;
+            }
+
+            a:hover{
+                color: $aHover;
+            }
+
+            a:active{
+                color: $aActive;
+                text-decoration: underline $aActive;
+            }
         }
     }
 
@@ -504,13 +541,16 @@ select {
 
 .footer{
     background-color: #f1f1f1;
-    
 
     .footer__wrapper{
         min-height: 143px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .footer__logo, .footer__copyright{
+        flex: 1 1 0;
     }
 
     .social-network__list{
@@ -524,14 +564,14 @@ select {
 
     .footer__copyright{
         display: flex;
-        min-width: 184px;
-        justify-content: space-between;
+        justify-content: end;
         align-items: center;
 
         span{
             font-size: 19px;
             font-weight: bold;
             line-height: 0.947;
+            margin-right: 29px;
         }
     }
 }
@@ -540,8 +580,59 @@ select {
 
 
 
-@media  (max-width: 1249px){
-    .header-conteiner{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media  (max-width: 1250px){
+    .header{
         margin: 0 0;
         padding: 0 50px;
         width: 100%;
@@ -554,7 +645,8 @@ select {
 
     .header-logo{  
         margin: 0 10px 0 0;    
-    }  
+    } 
+
     .header-nav{  
         display: none;
     }
@@ -575,31 +667,31 @@ select {
         font-size: 43px;
         line-height: 1.163;
     }
-     .border-wave{
-        height: 24px;
-    }
+
     .product-week{
         .main-content{
-            margin-left: 0;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 668px;
             height: 507px;
         }
     }
 
     .product-week{
         margin-top: 41px;
-        }
+    }
 
     .product-week__header{
         justify-content: space-between;
         margin: 0 0 50px 0;
         flex-direction: row-reverse;
-        }
+    }
 
     .product-week__name-block{
         font-size: 17px;
     }
 
-    .content_titel{
+    .content_title{
         font-size: 43px;
         line-height: 1.163;
     }
@@ -622,13 +714,15 @@ select {
         margin-bottom: 80px;  
           
         .main-content{
-            margin-left: 0;
+            margin-left: auto;
+            margin-right: auto;
             max-width: 668px;
         }
     }
-    .advantages__titel{
+    .advantages__title{
         margin-bottom: 16px;
     }   
+
     .advantages-item{
         flex: 1 1 334px;
     }
@@ -638,7 +732,7 @@ select {
         background-position-x: 0px; 
         position: relative;
 
-        .reviews__titel{
+        .reviews__title{
             margin-bottom: 53px;
         }
 
@@ -647,10 +741,11 @@ select {
         }
 
         .main-content{
-            margin-left: 0;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 668px;
         }
     }
-
     
     .contacts{
         margin-top: 69px;
@@ -659,7 +754,9 @@ select {
         .main-content{
             min-height: auto;
             padding-top: 0px;
-            margin-left: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 668px;
         }
 
         .contacts__header{
@@ -706,23 +803,38 @@ select {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 767px) {
 
-    .header > .header-right{  
+    .header-container > .header-right{  
         display: none;
     }
+
     .content{
         padding: 0;
     }  
-    .header{
+
+    .header-container{
         height: 78px;
     } 
-    .header-conteiner{
+    
+    .header{
         border-top: 1px solid #e7e7e7;
-        padding: 0 25px;
+        padding: 0 30px;
     }
 
-    .about__titel{
+    .about__title{
         margin-top: 75px;
         font-size: 26.35px;
         color: rgb(1, 0, 0);
@@ -734,6 +846,10 @@ select {
 
     .about__product{
         flex-direction: column;    
+    }
+
+    .about::after{
+        display: none;
     }
 
     .about-header{
@@ -797,17 +913,20 @@ select {
         font-size: 25px;
         line-height: 1.2;
     }
+
     .border-wave{
         display: none;
     }
+
     .product-week{
         .main-content{
-         height: auto;
-          margin: 0px 30px;
+            max-width: 260px;
+            height: auto;
+            margin: 0px auto;
         }
     }
 
-    .content_titel{
+    .content_title{
         font-size: 25px;
         line-height: 1.2;
     }
@@ -820,7 +939,7 @@ select {
         margin-bottom: 30px;
         flex-direction: column-reverse;
         align-items: flex-start;
-        }
+    }
 
     .product-week__name-block{
         padding: 8px 0px 0px 0px;
@@ -846,13 +965,14 @@ select {
     .advantages{
         margin-top: 33px;
         margin-bottom: 60px;
+
         .main-content{
             max-width: 260px;
             margin: 0 auto;
         }
     }
 
-    .advantages__titel{
+    .advantages__title{
         margin-bottom: 10px;
     }
 
@@ -868,15 +988,15 @@ select {
     }
 
     .reviews{
-    padding-top: 0px;
-    background: none;
+        padding-top: 0px;
+        background: none;
 
         .main-content{
             max-width: 260px;
             margin: 0 auto;
         }
 
-        .reviews__titel{
+        .reviews__title{
             margin-bottom: 35px;
         }
 
@@ -918,7 +1038,9 @@ select {
             button{
                 border: 1px solid #ececec;
                 width: 50%;
+                background-color: #ffffff;
             }
+
             button + button{
                 border-left: none;
             }
@@ -947,7 +1069,7 @@ select {
         }
 
         .contacts__text{
-            max-width: 260px;
+            max-width: 256px;
             margin-bottom: 42px;
             font-size: 15px;
             line-height: 2;
@@ -957,7 +1079,7 @@ select {
             }
 
             td{
-                min-width: 78px;
+                min-width: 73px;
                 vertical-align: top;
             }
         }
